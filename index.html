@@ -256,10 +256,16 @@
             overflow: hidden;
         }
         
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--spacing-xl);
+        }
+        
         .hero-content {
-            max-width: 800px;
-            position: relative;
-            z-index: 2;
+            flex: 1;
+            max-width: 600px;
         }
         
         .hero h1 {
@@ -303,25 +309,22 @@
         }
         
         .hero-image {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50%;
-            height: 80%;
-            background: linear-gradient(45deg, var(--gradient-tone), var(--secondary-shade));
-            border-radius: 20px 0 0 20px;
+            position: relative;
+            width: 45%;
+            margin-left: var(--spacing-xl);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
         }
         
         .hero-image img {
-            width: 80%;
+            width: 100%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+            display: block;
         }
         
         /* About Section */
@@ -631,8 +634,15 @@
                 font-size: 2.5rem;
             }
             
+            .hero .container {
+                flex-direction: column;
+                gap: var(--spacing-lg);
+            }
+            
             .hero-image {
-                display: none;
+                width: 100%;
+                margin-left: 0;
+                margin-top: var(--spacing-lg);
             }
             
             .hero-content {
@@ -784,6 +794,11 @@
                         <a href="#" class="btn btn-outline" data-page="services">View Our Services</a>
                     </div>
                 </div>
+                
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="MRI Machine">
+                </div>
+            </div>
         </section>
 
         <!-- About Preview -->
@@ -884,7 +899,7 @@
                     </div>
                     
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1516549655669-dfbf10d0c9b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Medical Technology">
+                        <img src="https://www.freepik.com/free-photo/doctor-getting-patient-ready-ct-scan_25053901.htm#fromView=keyword&page=1&position=2&uuid=41096565-4455-4a0c-a206-46c5ab6ffde8&query=Medical+scan" alt="Medical Technology">
                     </div>
                 </div>
                 
@@ -1048,7 +1063,7 @@
                     
                     <div class="doctor-card">
                         <div class="doctor-img">
-                            <img src="https://images.unsplash.com/photo-1591608971362-f08b2a75731a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dr. Anusha">
+                            <img src="https://www.freepik.com/free-ai-image/confident-doctor-clinic_418010511.htm#fromView=keyword&page=1&position=0&uuid=323fd3bb-5c44-476e-a055-a28b247e5fcf&query=Doctor" alt="Dr. Anusha">
                         </div>
                         <div class="doctor-info">
                             <h3>Dr. Anusha</h3>
@@ -1184,7 +1199,7 @@
                         <h3>Find Us on Google Maps</h3>
                         <div style="height: 300px; background-color: var(--gradient-tone); border-radius: var(--border-radius); margin-top: var(--spacing-md); display: flex; align-items: center; justify-content: center;">
                             <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--accent);"></i>
-                            <p style="margin-left: var(--spacing-md);">Google Maps integration would go here</p>
+                            <p style="margin-left: var(--spacing-md);">https://maps.app.goo.gl/2m52EDYXpVKZfzoA7</p>
                         </div>
                     </div>
                 </div>
