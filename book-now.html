@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now | Clariti Scanworld</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Spartan:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .booking-hero {
+            position: relative;
+            height: 50vh;
+            min-height: 350px;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--deep-teal) 0%, var(--dark-teal-green) 100%);
+        }
+        
+        .booking-hero .hero-content {
+            color: var(--off-white);
+            max-width: 700px;
+        }
+        
+        .booking-hero h1 {
+            color: var(--off-white);
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .booking-hero p {
+            font-size: 1.2rem;
+            color: rgba(250, 251, 251, 0.9);
+        }
+        
+        .booking-section {
+            padding: 80px 0;
+            background-color: var(--primary-bg);
+        }
+        
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .booking-info {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--accent);
+        }
+        
+        .booking-info h2 {
+            color: var(--dark-teal-green);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .booking-contact {
+            margin-top: 30px;
+        }
+        
+        .booking-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background-color: rgba(103, 208, 132, 0.05);
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+        
+        .booking-contact-item:hover {
+            background-color: rgba(103, 208, 132, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .booking-contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+        }
+        
+        .booking-contact-details h3 {
+            margin-bottom: 5px;
+            color: var(--dark-teal-green);
+        }
+        
+        .booking-contact-details p {
+            margin-bottom: 0;
+            color: var(--secondary-text);
+        }
+        
+        .booking-form {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--accent);
+        }
+        
+        .booking-form h2 {
+            color: var(--dark-teal-green);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--secondary-text);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            background-color: var(--gradient-tone);
+            border: 1px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            color: var(--primary-text);
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(103, 208, 132, 0.2);
+        }
+        
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23526C65' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 15px;
+        }
+        
+        .map-container {
+            margin-top: 50px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 2px solid var(--accent);
+            height: 450px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .confirmation-message {
+            display: none;
+            background-color: var(--accent);
+            color: var(--deep-teal);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 992px) {
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+            .booking-hero h1 { font-size: 2.8rem; }
+        }
+        
+        @media (max-width: 768px) {
+            .booking-hero { height: 40vh; }
+            .booking-hero h1 { font-size: 2.3rem; }
+            .booking-info, .booking-form { padding: 30px; }
+        }
+        
+        @media (max-width: 576px) {
+            .booking-hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header" class="solid">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="images/logo_overlay.png" alt="Clariti Scanworld Logo">
+                </div>
+            </div>
+            
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="bi bi-list"></i>
+            </div>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="instructions.html" class="nav-link">Patient Instructions</a></li>
+                    <li><a href="booking.html" class="nav-link active">Book Now</a></li>
+                    <li><a href="https://wa.me/919074389847" class="btn btn-whatsapp" target="_blank"><i class="bi bi-whatsapp"></i> Book on WhatsApp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="booking-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Book Your Appointment</h1>
+                <p><strong>Booking a Scan Shouldn't Be Complicated.</strong></p>
+                <p style="margin-top: 20px;">Choose the easiest way to schedule your diagnostic scan with us.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Content -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <!-- Quick Booking Options -->
+                <div class="booking-info">
+                    <h2>Quick Booking</h2>
+                    <p style="margin-bottom: 30px;">Get instant confirmation through these channels:</p>
+                    
+                    <div class="booking-contact">
+                        <div class="booking-contact-item">
+                            <div class="booking-contact-icon">
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <div class="booking-contact-details">
+                                <h3>WhatsApp Booking</h3>
+                                <p>+91 90743 89847</p>
+                                <a href="https://wa.me/919074389847" class="btn btn-whatsapp" style="margin-top: 10px; display: inline-block;" target="_blank">
+                                    <i class="bi bi-whatsapp"></i> Send Message
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-contact-item">
+                            <div class="booking-contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="booking-contact-details">
+                                <h3>Call Us</h3>
+                                <p><strong>9074389847</strong> / 8848189847</p>
+                                <p style="margin-top: 5px; font-size: 0.9rem;">Mon–Sat | 8:30 AM – 6:30 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-contact-item">
+                            <div class="booking-contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="booking-contact-details">
+                                <h3>Email</h3>
+                                <p>info@claritscanworld.com</p>
+                                <p style="margin-top: 5px; font-size: 0.9rem;">We reply within 2 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding: 20px; background-color: rgba(103, 208, 132, 0.05); border-radius: var(--border-radius);">
+                        <p style="margin-bottom: 0;"><strong>📍 Walk-in Welcome:</strong> UBI Road, Perumbavoor<br>No appointment needed for urgent lab tests.</p>
+                    </div>
+                </div>
+                
+                <!-- Online Booking Form -->
+                <div class="booking-form">
+                    <h2>Online Booking</h2>
+                    <p style="margin-bottom: 30px;">Fill this form and we'll confirm your appointment shortly.</p>
+                    
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="10-digit mobile number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="For digital reports">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="scanType">Select Scan Type *</label>
+                            <select id="scanType" class="form-control" required>
+                                <option value="" disabled selected>-- Please select --</option>
+                                <option value="MRI">1.5 Tesla MRI</option>
+                                <option value="Ultrasound">Advanced Ultrasound</option>
+                                <option value="Fetal">Fetal Medicine</option>
+                                <option value="Lab">Laboratory Services</option>
+                                <option value="NCS">Nerve Conduction Study (NCS)</option>
+                                <option value="EEG">Electroencephalogram (EEG)</option>
+                                <option value="Other">Other / Not Sure</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferredDate">Preferred Date *</label>
+                            <input type="date" id="preferredDate" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferredTime">Preferred Time (Optional)</label>
+                            <select id="preferredTime" class="form-control">
+                                <option value="" selected>-- Any time --</option>
+                                <option value="9-11">9:00 AM – 11:00 AM</option>
+                                <option value="11-1">11:00 AM – 1:00 PM</option>
+                                <option value="1-3">1:00 PM – 3:00 PM</option>
+                                <option value="3-5">3:00 PM – 5:00 PM</option>
+                                <option value="5-630">5:00 PM – 6:30 PM</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Additional Notes</label>
+                            <textarea id="message" class="form-control" rows="3" placeholder="Doctor's name, specific concerns, etc."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">Request Appointment</button>
+                        <p style="margin-top: 15px; font-size: 0.85rem; color: var(--secondary-text); text-align: center;">We'll send you a confirmation via WhatsApp or SMS within 30 minutes during working hours.</p>
+                    </form>
+                    
+                    <div id="confirmationMessage" class="confirmation-message">
+                        <i class="bi bi-check-circle"></i> Thank you! Your booking request has been received. We'll confirm shortly.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Google Maps -->
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=UBI+Road+Perumbavoor&output=embed" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-text">Clariti <span>Scanworld</span></div>
+                    </div>
+                    <p>Perumbavoor's only diagnostic centre with 1.5 Tesla MRI, advanced ultrasound, and comprehensive laboratory services.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="https://wa.me/919074389847" class="social-link" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="instructions.html">Patient Instructions</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#mri">1.5 Tesla MRI</a></li>
+                        <li><a href="services.html#ultrasound">Advanced Ultrasound</a></li>
+                        <li><a href="services.html#fetal">Fetal Medicine</a></li>
+                        <li><a href="services.html#lab">Laboratory Services</a></li>
+                        <li><a href="services.html#ncs">NCS & EEG</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="bi bi-geo-alt" style="margin-right: 8px; color: var(--accent);"></i> UBI Road, Perumbavoor</li>
+                        <li><i class="bi bi-telephone" style="margin-right: 8px; color: var(--accent);"></i> 9074389847</li>
+                        <li><i class="bi bi-telephone" style="margin-right: 8px; color: var(--accent);"></i> 8848189847</li>
+                        <li><i class="bi bi-envelope" style="margin-right: 8px; color: var(--accent);"></i> info@claritscanworld.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Clariti Scanworld. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        const mobileToggle = document.getElementById("mobile-toggle");
+        const nav = document.getElementById("main-nav");
+        
+        if (mobileToggle && nav) {
+            mobileToggle.addEventListener("click", () => {
+                nav.classList.toggle("active");
+            });
+        }
+        
+        const navLinks = document.querySelectorAll("#main-nav a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("active");
+            });
+        });
+        
+        // Set minimum date for date picker (today)
+        const today = new Date().toISOString().split('T')[0];
+        const dateInput = document.getElementById('preferredDate');
+        if (dateInput) {
+            dateInput.setAttribute('min', today);
+        }
+        
+        // Form submission handler
+        const bookingForm = document.getElementById('bookingForm');
+        const confirmationMsg = document.getElementById('confirmationMessage');
+        
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would normally send data to server
+                console.log('Booking submitted');
+                
+                // Show confirmation message
+                confirmationMsg.style.display = 'block';
+                
+                // Reset form
+                this.reset();
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    confirmationMsg.style.display = 'none';
+                }, 5000);
+            });
+        }
+    </script>
+</body>
+</html>

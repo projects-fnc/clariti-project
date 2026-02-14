@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Clariti Scanworld</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Spartan:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables from Brand Palette */
+        :root {
+            /* Color Palette from Brand Guidelines */
+            --deep-teal: #0A2121;
+            --dark-teal-green: #122E2B;
+            --muted-teal-grey: #526C65;
+            --light-mint-green: #67D084;
+            --off-white: #FAFBFB;
+            --soft-grey: #A9B3B4;
+            
+            /* Updated Color Scheme */
+            --primary-bg: #FAFBFB; /* Off-white */
+            --gradient-tone: #FAFBFB;
+            --secondary-shade: #E8F5E9;
+            --accent: #67D084; /* Light Mint Green */
+            --primary-text: #0A2121;
+            --secondary-text: #526C65;
+            --footer-bg: #526C65; /* Muted Teal Grey */
+            
+            /* Spacing Variables */
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-text);
+            background-color: var(--primary-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography from existing website */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Spartan', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: var(--spacing-md);
+        }
+
+        h1 {
+            font-size: 62px;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--dark-teal-green);
+            position: relative;
+            padding-bottom: var(--spacing-sm);
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            transform: translateX(-50%);
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-text);
+        }
+
+        h4 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+            color: var(--secondary-text);
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--deep-teal);
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            text-align: center;
+            font-family: 'Spartan', sans-serif;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background-color: #56b870;
+            transform: translateY(-2px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent);
+            color: var(--deep-teal);
+        }
+
+        .section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .section-header h2 {
+            display: inline-block;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Header & Navigation - Matches existing site */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: transparent;
+            padding: 1.5rem 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 1rem 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--box-shadow);
+        }
+
+        header.solid {
+            padding: 1rem 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--box-shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            transform: translateY(-4px);
+        }
+
+        .logo-img img {
+            height: 100%;
+            width: auto;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        nav li {
+            display: flex;
+            align-items: center;
+        }
+
+        nav li:last-child {
+            margin-left: 30px;
+        }
+
+        nav a {
+            font-weight: 600;
+            padding: 0.5rem 0;
+            position: relative;
+            color: var(--off-white);
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        nav .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            line-height: 1;
+        }
+
+        header.scrolled nav a {
+            color: var(--primary-text);
+        }
+
+        header.solid nav a {
+            color: var(--primary-text);
+        }
+        
+        header.solid nav a:hover {
+            color: var(--accent);
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        nav a:hover:after,
+        nav a.active:after {
+            width: 100%;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--accent);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--off-white);
+        }
+
+        header.scrolled .mobile-toggle {
+            color: var(--primary-text);
+        }
+
+        header.solid .mobile-toggle {
+            color: var(--primary-text);
+        }
+
+        /* Hero Section */
+        .services-hero {
+            position: relative;
+            height: 80vh;
+            min-height: 600px;
+            margin-top: 80px;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(18, 46, 43, 0.85) 0%, rgba(18, 46, 43, 0.7) 100%);
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            color: var(--off-white);
+        }
+
+        .hero-content h1 {
+            color: var(--off-white);
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            color: rgba(250, 251, 251, 0.9);
+        }
+
+        .btn-hero {
+            background-color: var(--accent);
+            font-size: 1.1rem;
+            padding: 15px 35px;
+        }
+
+        /* About Section */
+        .services-about {
+            padding: 80px 0;
+            background-color: var(--primary-bg);
+        }
+
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--dark-teal-green);
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            color: var(--secondary-text);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            color: var(--secondary-text);
+            line-height: 1.8;
+        }
+
+        /* Services Grid Section - DEEP TEAL Background */
+        .services-grid-section {
+            padding: 80px 0;
+            background-color: var(--deep-teal); /* DEEP TEAL (#0A2121) */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-grid-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230A2121"/><path d="M0 50L50 0L100 50L50 100Z" fill="%23122E2B" opacity="0.1"/></svg>');
+            opacity: 0.1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .services-grid-section .section-header h2 {
+            color: var(--off-white); /* White text for contrast on deep teal */
+        }
+
+        .services-grid-section .section-header p {
+            color: rgba(250, 251, 251, 0.85); /* Off-white with opacity for contrast */
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            position: relative;
+            z-index: 1;
+        }
+
+        .grid-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .service-card-grid {
+            background-color: var(--off-white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+            border-top: 4px solid var(--accent); /* Light Mint Green border */
+        }
+
+        .service-card-grid:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent); /* Light Mint Green for icons */
+            margin-bottom: 20px;
+        }
+
+        .service-card-grid h3 {
+            font-family: 'Spartan', sans-serif;
+            font-size: 1.5rem;
+            color: var(--dark-teal-green); /* Dark Teal Green for headings */
+            margin-bottom: 15px;
+        }
+
+        .service-card-grid p {
+            color: var(--secondary-text);
+            line-height: 1.6;
+        }
+
+        /* Detailed Services Section */
+        .detailed-services {
+            padding: 100px 0;
+            background-color: var(--primary-bg);
+        }
+
+        .service-detail {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 120px;
+        }
+
+        .service-detail.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .service-image-collage {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 15px;
+            height: 500px;
+        }
+
+        .image-main {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .image-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .image-main:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-secondary {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .image-secondary img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .image-secondary:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-info {
+            flex: 1;
+        }
+
+        .service-number {
+            font-family: 'Spartan', sans-serif;
+            font-size: 5rem;
+            font-weight: 800;
+            color: rgba(103, 208, 132, 0.1);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .service-info h2 {
+            font-family: 'Spartan', sans-serif;
+            font-size: 2.5rem;
+            color: var(--dark-teal-green);
+            margin-bottom: 20px;
+        }
+
+        .service-description {
+            font-size: 1.1rem;
+            color: var(--secondary-text);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .service-features {
+            margin-bottom: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .feature i {
+            color: var(--accent);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .feature span {
+            color: var(--primary-text);
+            font-weight: 500;
+        }
+
+        .btn-service {
+            background-color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .btn-service:hover {
+            background-color: #56b870;
+        }
+
+        /* CTA Section - Muted Teal Grey */
+        .services-cta {
+            padding: 80px 0;
+            background-color: var(--muted-teal-grey); /* Muted Teal Grey */
+            text-align: center;
+        }
+
+        .services-cta h2 {
+            color: var(--off-white);
+            margin-bottom: 20px;
+        }
+
+        .services-cta p {
+            color: rgba(250, 251, 251, 0.85);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Footer - Deep Teal */
+        footer {
+            background-color: var(--deep-teal); /* Deep Teal */
+            color: var(--off-white);
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-logo {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .logo-text {
+            font-family: 'Spartan', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--off-white);
+        }
+
+        .logo-text span {
+            color: var(--accent);
+        }
+
+        .footer-about p {
+            color: rgba(250, 251, 251, 0.7);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .footer-links h3 {
+            color: var(--accent);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.3rem;
+        }
+
+        .footer-links ul li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-links ul li a {
+            color: rgba(250, 251, 251, 0.8);
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--off-white);
+        }
+
+        .social-link:hover {
+            background-color: var(--accent);
+            color: var(--deep-teal);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(250, 251, 251, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 56px;
+            }
+            
+            h2 {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 48px;
+            }
+            
+            h2 {
+                font-size: 40px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .service-detail,
+            .service-detail.reverse {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .service-image-collage {
+                width: 100%;
+                height: 400px;
+            }
+            
+            .grid-row {
+                flex-wrap: wrap;
+            }
+            
+            .service-card-grid {
+                min-width: calc(50% - 30px);
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                position: relative;
+            }
+            
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--off-white);
+                padding: var(--spacing-lg);
+                box-shadow: var(--box-shadow);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+            
+            nav a {
+                color: var(--primary-text) !important;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .services-hero {
+                height: 70vh;
+                min-height: 500px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .service-card-grid {
+                min-width: 100%;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: var(--spacing-lg) 0;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            h2 {
+                font-size: 28px;
+            }
+            
+            h3 {
+                font-size: 20px;
+            }
+            
+            .services-hero {
+                height: 60vh;
+                min-height: 400px;
+                margin-top: 70px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .service-image-collage {
+                grid-template-columns: 1fr;
+                grid-template-rows: 300px 150px;
+                height: auto;
+            }
+            
+            .image-main {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+            
+            .image-secondary {
+                grid-row: 2 / 3;
+            }
+            
+            .service-detail {
+                margin-bottom: 80px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Matches existing site) -->
+    <header id="header" class="solid">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="images/logo_overlay.png" alt="Clariti Scanworld Logo">
+                </div>
+            </div>
+            
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="bi bi-list"></i>
+            </div>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="index.html#instructions" class="nav-link">Patient Instructions</a></li>
+                    <li><a href="index.html#booking" class="nav-link">Book Now</a></li>
+                    <li><a href="https://wa.me/919074389847" class="btn btn-whatsapp" target="_blank"><i class="bi bi-whatsapp"></i> Book on WhatsApp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Doctor and patient consultation">
+        </div>
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Advanced Diagnostic Services</h1>
+                    <p>Cutting-edge technology combined with compassionate care for accurate diagnosis and peace of mind</p>
+                    <a href="https://wa.me/919074389847" class="btn btn-hero" target="_blank">Book a Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="services-about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Committed to You</h2>
+                <p class="intro-text">At Clariti Scanworld, we blend medical expertise with state-of-the-art technology to provide diagnostic services that are not just accurate, but also delivered with genuine care and respect for every patient.</p>
+                <p>From our advanced 1.5 Tesla MRI to comprehensive fetal medicine services, we ensure that your diagnostic experience is seamless, comfortable, and trustworthy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section (DEEP TEAL Background) -->
+    <section class="services-grid-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Comprehensive Services</h2>
+                <p>Each service is designed with precision, clarity, and patient comfort in mind</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Row 1 -->
+                <div class="grid-row">
+                    <div class="service-card-grid">
+                        <div class="service-icon">
+                            <i class="bi bi-motherboard"></i>
+                        </div>
+                        <h3>1.5 Tesla MRI</h3>
+                        <p>High-definition imaging with exceptional clarity for confident diagnosis</p>
+                    </div>
+                    
+                    <div class="service-card-grid">
+                        <div class="service-icon">
+                            <i class="bi bi-activity"></i>
+                        </div>
+                        <h3>Advanced Ultrasound</h3>
+                        <p>Next-generation imaging with Mindray Resonai i9 Elite for precise evaluation</p>
+                    </div>
+                    
+                    <div class="service-card-grid">
+                        <div class="service-icon">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <h3>Fetal Medicine</h3>
+                        <p>Specialized care for expecting mothers with detailed fetal assessment</p>
+                    </div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="grid-row">
+                    <div class="service-card-grid">
+                        <div class="service-icon">
+                            <i class="bi bi-droplet"></i>
+                        </div>
+                        <h3>Laboratory Services</h3>
+                        <p>Comprehensive diagnostic testing with rapid, accurate results</p>
+                    </div>
+                    
+                    <div class="service-card-grid">
+                        <div class="service-icon">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h3>Nerve Conduction Studies</h3>
+                        <p>Mapping nerve function for targeted treatment of neurological conditions</p>
+                    </div>
+                    
+                    <div class="service-card-grid">
+                        <div class="service-icon">
+                            <i class="bi bi-brain"></i>
+                        </div>
+                        <h3>Electroencephalogram</h3>
+                        <p>Precision monitoring of brain activity for neurological diagnosis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services Section -->
+    <section class="detailed-services">
+        <div class="container">
+            <!-- MRI Service -->
+            <div class="service-detail">
+                <div class="service-image-collage">
+                    <div class="image-main">
+                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="MRI Machine">
+                    </div>
+                    <div class="image-secondary">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MRI Scan Results">
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="service-number">01</div>
+                    <h2>1.5 Tesla MRI</h2>
+                    <p class="service-description">Our GE 1.5 Tesla MRI scanner delivers exceptional imaging with faster scanning times and superior image quality. The high magnetic field strength provides detailed visualization of soft tissues, joints, and organs for accurate diagnosis.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Full-body MRI scanning</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Neurological and musculoskeletal imaging</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Cardiac and abdominal imaging</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Contrast and non-contrast studies</span>
+                        </div>
+                    </div>
+                    
+                    <a href="index.html#booking" class="btn btn-service">Book MRI Scan</a>
+                </div>
+            </div>
+            
+            <!-- Ultrasound Service -->
+            <div class="service-detail reverse">
+                <div class="service-image-collage">
+                    <div class="image-main">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ultrasound Procedure">
+                    </div>
+                    <div class="image-secondary">
+                        <img src="https://images.unsplash.com/photo-1516549655669-df6654e435de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ultrasound Monitor">
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="service-number">02</div>
+                    <h2>Advanced Ultrasound</h2>
+                    <p class="service-description">The Mindray Resonai i9 Elite Ultrasound system offers outstanding image clarity with AI-assisted measurements, elastography, liver fat analysis, and high-resolution 3D/4D imaging for accurate evaluation across clinical needs.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Abdominal and pelvic ultrasound</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Obstetric and fetal ultrasound</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Vascular and Doppler studies</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Small parts and musculoskeletal ultrasound</span>
+                        </div>
+                    </div>
+                    
+                    <a href="index.html#booking" class="btn btn-service">Book Ultrasound</a>
+                </div>
+            </div>
+            
+            <!-- Fetal Medicine Service -->
+            <div class="service-detail">
+                <div class="service-image-collage">
+                    <div class="image-main">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fetal Ultrasound">
+                    </div>
+                    <div class="image-secondary">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Expecting Parents">
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="service-number">03</div>
+                    <h2>Fetal Medicine</h2>
+                    <p class="service-description">Comprehensive care for expecting mothers including detailed fetal anomaly scans, growth monitoring, and specialized consultations with our experienced fetal medicine specialists.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>First trimester screening</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Anomaly scans (level I & II)</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Fetal echocardiography</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Genetic counseling</span>
+                        </div>
+                    </div>
+                    
+                    <a href="index.html#booking" class="btn btn-service">Book Fetal Scan</a>
+                </div>
+            </div>
+            
+            <!-- Laboratory Services -->
+            <div class="service-detail reverse">
+                <div class="service-image-collage">
+                    <div class="image-main">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laboratory Testing">
+                    </div>
+                    <div class="image-secondary">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lab Equipment">
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="service-number">04</div>
+                    <h2>Laboratory Services</h2>
+                    <p class="service-description">Our comprehensive diagnostic lab offers routine and specialized tests with rapid turnaround times. Guided by experienced professionals, we ensure accurate results for informed medical decisions.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Complete blood count (CBC)</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Biochemistry and hormonal assays</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Urine and stool analysis</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Specialized tests and profiles</span>
+                        </div>
+                    </div>
+                    
+                    <a href="index.html#booking" class="btn btn-service">Book Lab Test</a>
+                </div>
+            </div>
+            
+            <!-- NCS Service -->
+            <div class="service-detail">
+                <div class="service-image-collage">
+                    <div class="image-main">
+                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nerve Conduction Study">
+                    </div>
+                    <div class="image-secondary">
+                        <img src="https://images.unsplash.com/photo-1516549655669-df6654e435de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Neurological Assessment">
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="service-number">05</div>
+                    <h2>Nerve Conduction Studies</h2>
+                    <p class="service-description">Mapping nerve function for targeted treatment of neurological conditions like carpal tunnel syndrome, peripheral neuropathies, and radiculopathies with precise diagnostic capability.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Motor and sensory nerve conduction</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Late responses (F-wave, H-reflex)</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Repetitive nerve stimulation</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Blink reflex studies</span>
+                        </div>
+                    </div>
+                    
+                    <a href="index.html#booking" class="btn btn-service">Book NCS Test</a>
+                </div>
+            </div>
+            
+            <!-- EEG Service -->
+            <div class="service-detail reverse">
+                <div class="service-image-collage">
+                    <div class="image-main">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="EEG Procedure">
+                    </div>
+                    <div class="image-secondary">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Brain Activity Monitoring">
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="service-number">06</div>
+                    <h2>Electroencephalogram</h2>
+                    <p class="service-description">Monitoring brain activity with precision and care for diagnosis of epilepsy, sleep disorders, encephalopathies, and other neurological conditions with advanced EEG technology.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Routine EEG (20-30 minutes)</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Sleep-deprived EEG</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Long-term video EEG monitoring</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Ambulatory EEG</span>
+                        </div>
+                    </div>
+                    
+                    <a href="index.html#booking" class="btn btn-service">Book EEG Test</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Muted Teal Grey) -->
+    <section class="services-cta">
+        <div class="container">
+            <h2>Ready for Your Diagnostic Scan?</h2>
+            <p>Schedule your appointment today and experience world-class diagnostic care</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/919074389847" class="btn btn-whatsapp" target="_blank">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                </a>
+                <a href="tel:+919074389847" class="btn btn-outline">
+                    <i class="bi bi-telephone"></i> Call Now: 9074389847
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Deep Teal) -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-text">Clariti <span>Scanworld</span></div>
+                    </div>
+                    <p>Perumbavoor's only diagnostic centre with 1.5 Tesla MRI, advanced ultrasound, and comprehensive laboratory services.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="https://wa.me/919074389847" class="social-link" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html#instructions">Patient Instructions</a></li>
+                        <li><a href="index.html#booking">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#mri">1.5 Tesla MRI</a></li>
+                        <li><a href="#ultrasound">Advanced Ultrasound</a></li>
+                        <li><a href="#fetal">Fetal Medicine</a></li>
+                        <li><a href="#lab">Laboratory Services</a></li>
+                        <li><a href="#ncs">NCS & EEG</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="bi bi-geo-alt" style="margin-right: 8px; color: var(--accent);"></i> UBI Road, Perumbavoor</li>
+                        <li><i class="bi bi-telephone" style="margin-right: 8px; color: var(--accent);"></i> 9074389847</li>
+                        <li><i class="bi bi-telephone" style="margin-right: 8px; color: var(--accent);"></i> 8848189847</li>
+                        <li><i class="bi bi-envelope" style="margin-right: 8px; color: var(--accent);"></i> info@claritscanworld.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Clariti Scanworld. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (() => {
+            // DOM Elements
+            const header = document.getElementById("header");
+            const mobileToggle = document.getElementById("mobile-toggle");
+            const nav = document.getElementById("main-nav");
+            
+            // Mobile menu toggle
+            if (mobileToggle && nav) {
+                mobileToggle.addEventListener("click", () => {
+                    nav.classList.toggle("active");
+                });
+            }
+            
+            // Close mobile menu when clicking a link
+            const navLinks = document.querySelectorAll("#main-nav a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    nav.classList.remove("active");
+                });
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // Skip if it's not an anchor link to current page
+                    if (href === '#' || href.startsWith('#!')) return;
+                    
+                    // If it's an anchor link
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Animate service cards on scroll
+            const animateOnScroll = () => {
+                const serviceCards = document.querySelectorAll('.service-card-grid');
+                const serviceDetails = document.querySelectorAll('.service-detail');
+                
+                serviceCards.forEach(card => {
+                    const cardPosition = card.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (cardPosition < screenPosition) {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }
+                });
+                
+                serviceDetails.forEach(detail => {
+                    const detailPosition = detail.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (detailPosition < screenPosition) {
+                        detail.style.opacity = '1';
+                        detail.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial state for animation
+            document.querySelectorAll('.service-card-grid').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            
+            document.querySelectorAll('.service-detail').forEach(detail => {
+                detail.style.opacity = '0';
+                detail.style.transform = 'translateY(30px)';
+                detail.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+            
+            // Trigger animation on load and scroll
+            window.addEventListener('load', animateOnScroll);
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Initialize animation
+            setTimeout(animateOnScroll, 300);
+        })();
+    </script>
+</body>
+</html>

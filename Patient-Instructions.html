@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Instructions | Clariti Scanworld</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Spartan:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .instructions-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background-color: var(--deep-teal);
+        }
+        
+        .instructions-hero .hero-content {
+            color: var(--off-white);
+            max-width: 700px;
+        }
+        
+        .instructions-hero h1 {
+            color: var(--off-white);
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .instructions-hero p {
+            font-size: 1.2rem;
+            color: rgba(250, 251, 251, 0.9);
+        }
+        
+        .instructions-section {
+            padding: 80px 0;
+            background-color: var(--primary-bg);
+        }
+        
+        .instruction-category {
+            margin-bottom: 60px;
+        }
+        
+        .instruction-category h2 {
+            color: var(--dark-teal-green);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+        }
+        
+        .instruction-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border-left: 5px solid var(--accent);
+            transition: var(--transition);
+        }
+        
+        .instruction-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .instruction-card h3 {
+            color: var(--dark-teal-green);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .instruction-card h3 i {
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+        
+        .instruction-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: var(--secondary-text);
+        }
+        
+        .instruction-list li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        .important-note {
+            background-color: rgba(103, 208, 132, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-top: 40px;
+        }
+        
+        .important-note h4 {
+            color: var(--dark-teal-green);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .instructions-hero h1 { font-size: 2.3rem; }
+        }
+        
+        @media (max-width: 576px) {
+            .instructions-hero { height: 50vh; }
+            .instructions-hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header" class="solid">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="images/logo_overlay.png" alt="Clariti Scanworld Logo">
+                </div>
+            </div>
+            
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="bi bi-list"></i>
+            </div>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="instructions.html" class="nav-link active">Patient Instructions</a></li>
+                    <li><a href="booking.html" class="nav-link">Book Now</a></li>
+                    <li><a href="https://wa.me/919074389847" class="btn btn-whatsapp" target="_blank"><i class="bi bi-whatsapp"></i> Book on WhatsApp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="instructions-hero" style="background: linear-gradient(135deg, var(--deep-teal) 0%, var(--dark-teal-green) 100%);">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Patient Instructions</h1>
+                <p><strong>Come Prepared, Stay Comfortable</strong></p>
+                <p style="margin-top: 20px;">Follow these simple guidelines to ensure a smooth and stress-free diagnostic experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructions Content -->
+    <section class="instructions-section">
+        <div class="container">
+            <div class="instruction-category">
+                <h2>MRI Scan</h2>
+                <div class="instruction-card">
+                    <h3><i class="bi bi-clock"></i> Before Your Appointment</h3>
+                    <ul class="instruction-list">
+                        <li><strong>Arrival:</strong> Please reach 20-30 minutes early for preparation. If oral contrast is needed, arrive 45 minutes early (you will be informed during booking).</li>
+                        <li><strong>Pacemakers & Implants:</strong> Inform us if you have pacemakers, valves, ICDs, pumps, stents, clips, or metal implants. Some devices are not MRI-safe.</li>
+                        <li><strong>Claustrophobia:</strong> Our wide-bore MRI, calming lights, music, and continuous communication help reduce anxiety. A companion can stay inside for support.</li>
+                        <li><strong>Clothing:</strong> Wear loose and comfortable clothes. All metal items (jewellery, phone, belts, wallet, cards) must be removed.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="instruction-category">
+                <h2>Ultrasound</h2>
+                <div class="instruction-card">
+                    <h3><i class="bi bi-cup"></i> Preparation</h3>
+                    <ul class="instruction-list">
+                        <li><strong>Abdominal & Pelvic Scans:</strong> Drink 3-4 glasses of water 1 hour before the scan and avoid urinating until after the scan.</li>
+                        <li><strong>Fasting:</strong> No fasting needed unless specifically instructed by your doctor.</li>
+                        <li><strong>Clothing:</strong> Wear loose, two-piece clothing for easy access to the examination area.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="instruction-category">
+                <h2>Fetal Scans</h2>
+                <div class="instruction-card">
+                    <h3><i class="bi bi-heart"></i> For Expecting Mothers</h3>
+                    <ul class="instruction-list">
+                        <li><strong>Referral:</strong> Bring your doctor's referral and any previous scan reports.</li>
+                        <li><strong>Timing:</strong> Best done between 12-22 weeks depending on scan type.</li>
+                        <li><strong>Hydration:</strong> Drink water as advised for better image clarity.</li>
+                        <li><strong>Comfort:</strong> You may bring a companion for support during the scan.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="instruction-category">
+                <h2>Laboratory Services</h2>
+                <div class="instruction-card">
+                    <h3><i class="bi bi-droplet"></i> Blood & Urine Tests</h3>
+                    <ul class="instruction-list">
+                        <li><strong>Fasting:</strong> 8-10 hours fasting required for glucose, lipid profile, and certain biochemistry tests.</li>
+                        <li><strong>Hydration:</strong> Drink plenty of water unless fasting is required.</li>
+                        <li><strong>Medications:</strong> Continue regular medications unless advised otherwise by your doctor.</li>
+                        <li><strong>Reports:</strong> Digital reports will be shared via WhatsApp/Email within 4-6 hours for routine tests.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="instruction-category">
+                <h2>NCS & EEG</h2>
+                <div class="instruction-card">
+                    <h3><i class="bi bi-cpu"></i> Nerve Conduction Studies</h3>
+                    <ul class="instruction-list">
+                        <li>Avoid applying lotions or oils on the skin on the day of the test.</li>
+                        <li>Inform the technician if you have a pacemaker or are on blood thinners.</li>
+                        <li>Wear loose, comfortable clothing.</li>
+                    </ul>
+                </div>
+                <div class="instruction-card">
+                    <h3><i class="bi bi-brain"></i> Electroencephalogram (EEG)</h3>
+                    <ul class="instruction-list">
+                        <li>Wash your hair before the test. Do not apply oil, conditioner, or hair spray.</li>
+                        <li>For sleep-deprived EEG, follow specific instructions provided at booking.</li>
+                        <li>Continue regular medications unless advised otherwise.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="important-note">
+                <h4><i class="bi bi-exclamation-triangle"></i> Important Note</h4>
+                <p style="margin-bottom: 0;">If you have any specific concerns or medical conditions, please inform our staff at the time of booking. We're here to ensure your diagnostic experience is as comfortable and accurate as possible.</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="booking.html" class="btn" style="margin-right: 15px;">Book Your Appointment</a>
+                <a href="https://wa.me/919074389847" class="btn btn-whatsapp" target="_blank"><i class="bi bi-whatsapp"></i> Ask on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-text">Clariti <span>Scanworld</span></div>
+                    </div>
+                    <p>Perumbavoor's only diagnostic centre with 1.5 Tesla MRI, advanced ultrasound, and comprehensive laboratory services.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="https://wa.me/919074389847" class="social-link" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="instructions.html">Patient Instructions</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#mri">1.5 Tesla MRI</a></li>
+                        <li><a href="services.html#ultrasound">Advanced Ultrasound</a></li>
+                        <li><a href="services.html#fetal">Fetal Medicine</a></li>
+                        <li><a href="services.html#lab">Laboratory Services</a></li>
+                        <li><a href="services.html#ncs">NCS & EEG</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="bi bi-geo-alt" style="margin-right: 8px; color: var(--accent);"></i> UBI Road, Perumbavoor</li>
+                        <li><i class="bi bi-telephone" style="margin-right: 8px; color: var(--accent);"></i> 9074389847</li>
+                        <li><i class="bi bi-telephone" style="margin-right: 8px; color: var(--accent);"></i> 8848189847</li>
+                        <li><i class="bi bi-envelope" style="margin-right: 8px; color: var(--accent);"></i> info@claritscanworld.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Clariti Scanworld. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        const mobileToggle = document.getElementById("mobile-toggle");
+        const nav = document.getElementById("main-nav");
+        
+        if (mobileToggle && nav) {
+            mobileToggle.addEventListener("click", () => {
+                nav.classList.toggle("active");
+            });
+        }
+        
+        const navLinks = document.querySelectorAll("#main-nav a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("active");
+            });
+        });
+    </script>
+</body>
+</html>
