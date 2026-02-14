@@ -4,741 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clariti Scanworld | Perumbavoor's Only MRI Centre</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-bg: #0A2121;
-            --gradient-tone: #122E2B;
-            --secondary-shade: #526C65;
-            --accent: #67D084;
-            --primary-text: #FAFBFB;
-            --secondary-text: #A9B3B4;
-            --spacing-sm: 0.5rem;
-            --spacing-md: 1rem;
-            --spacing-lg: 2rem;
-            --spacing-xl: 3rem;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--primary-text);
-            background-color: var(--primary-bg);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            line-height: 1.3;
-            margin-bottom: var(--spacing-md);
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-        }
-        
-        h2 {
-            font-size: 2rem;
-            color: var(--accent);
-            position: relative;
-            padding-bottom: var(--spacing-sm);
-        }
-        
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--accent);
-        }
-        
-        h3 {
-            font-size: 1.5rem;
-            color: var(--primary-text);
-        }
-        
-        p {
-            margin-bottom: var(--spacing-md);
-            color: var(--secondary-text);
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-lg);
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: var(--primary-bg);
-            padding: 12px 28px;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 1rem;
-            text-align: center;
-        }
-        
-        .btn:hover {
-            background-color: #56b870;
-            transform: translateY(-2px);
-            box-shadow: var(--box-shadow);
-        }
-        
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: white;
-        }
-        
-        .btn-whatsapp:hover {
-            background-color: #1da851;
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--accent);
-            color: var(--primary-bg);
-        }
-        
-        .section {
-            padding: var(--spacing-xl) 0;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-        }
-        
-        .section-header h2 {
-            display: inline-block;
-        }
-        
-        .text-center {
-            text-align: center;
-        }
-        
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: rgba(10, 33, 33, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            transition: var(--transition);
-        }
-        
-        header.scrolled {
-            padding: 0.7rem 0;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-        }
-        
-        .logo-img {
-            height: 50px;
-            width: auto;
-            background-color: var(--accent);
-            border-radius: var(--border-radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5px;
-        }
-        
-        .logo-text {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-text);
-        }
-        
-        .logo-text span {
-            color: var(--accent);
-        }
-        
-        nav ul {
-            display: flex;
-            gap: var(--spacing-lg);
-        }
-        
-        nav a {
-            font-weight: 500;
-            padding: 0.5rem 0;
-            position: relative;
-        }
-        
-        nav a:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent);
-            transition: var(--transition);
-        }
-        
-        nav a:hover:after,
-        nav a.active:after {
-            width: 100%;
-        }
-        
-        nav a:hover,
-        nav a.active {
-            color: var(--accent);
-        }
-        
-        .mobile-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding-top: 120px;
-            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--gradient-tone) 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: var(--spacing-xl);
-        }
-        
-        .hero-content {
-            flex: 1;
-            max-width: 600px;
-        }
-        
-        .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: var(--spacing-md);
-            line-height: 1.2;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.3rem;
-            color: var(--accent);
-            margin-bottom: var(--spacing-lg);
-            font-weight: 500;
-        }
-        
-        .hero-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-xl);
-        }
-        
-        .hero-feature {
-            background-color: rgba(122, 208, 132, 0.1);
-            border-left: 3px solid var(--accent);
-            padding: var(--spacing-md);
-            border-radius: var(--border-radius);
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .hero-feature h3 {
-            margin-bottom: var(--spacing-sm);
-            font-size: 1.2rem;
-        }
-        
-        .hero-btns {
-            display: flex;
-            gap: var(--spacing-md);
-            flex-wrap: wrap;
-        }
-        
-        .hero-image {
-            position: relative;
-            width: 45%;
-            margin-left: var(--spacing-xl);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            border-radius: var(--border-radius);
-            display: block;
-        }
-        
-        /* About Section */
-        .about {
-            background-color: var(--gradient-tone);
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-xl);
-            align-items: center;
-        }
-        
-        .about-image {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: var(--transition);
-        }
-        
-        .about-image:hover img {
-            transform: scale(1.03);
-        }
-        
-        .about-features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-lg);
-        }
-        
-        .about-feature {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: var(--spacing-md);
-            border-radius: var(--border-radius);
-            border-left: 3px solid var(--accent);
-        }
-        
-        .about-feature h4 {
-            color: var(--accent);
-            margin-bottom: var(--spacing-sm);
-        }
-        
-        /* Services Section */
-        .services {
-            background-color: var(--primary-bg);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
-        }
-        
-        .service-card {
-            background-color: var(--gradient-tone);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            transition: var(--transition);
-            box-shadow: var(--box-shadow);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.05);
-        }
-        
-        .service-content {
-            padding: var(--spacing-lg);
-        }
-        
-        .service-content h3 {
-            color: var(--accent);
-            margin-bottom: var(--spacing-md);
-        }
-        
-        /* Doctors Section */
-        .doctors {
-            background-color: var(--gradient-tone);
-        }
-        
-        .doctors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: var(--spacing-lg);
-        }
-        
-        .doctor-card {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            text-align: center;
-            transition: var(--transition);
-        }
-        
-        .doctor-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--box-shadow);
-        }
-        
-        .doctor-img {
-            height: 250px;
-            overflow: hidden;
-        }
-        
-        .doctor-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .doctor-info {
-            padding: var(--spacing-lg);
-        }
-        
-        .doctor-info h3 {
-            margin-bottom: var(--spacing-sm);
-        }
-        
-        .doctor-specialty {
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: var(--spacing-md);
-        }
-        
-        /* Contact Section */
-        .contact {
-            background-color: var(--primary-bg);
-        }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-xl);
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-lg);
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--spacing-md);
-        }
-        
-        .contact-icon {
-            background-color: rgba(103, 208, 132, 0.1);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent);
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-        
-        .contact-details h3 {
-            margin-bottom: var(--spacing-sm);
-        }
-        
-        .contact-form {
-            background-color: var(--gradient-tone);
-            padding: var(--spacing-xl);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-        }
-        
-        .form-group {
-            margin-bottom: var(--spacing-md);
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: var(--spacing-sm);
-            color: var(--secondary-text);
-            font-weight: 500;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--secondary-shade);
-            border-radius: var(--border-radius);
-            color: var(--primary-text);
-            font-family: 'Inter', sans-serif;
-            transition: var(--transition);
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #061616;
-            padding: var(--spacing-xl) 0 var(--spacing-lg);
-        }
-        
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--spacing-xl);
-            margin-bottom: var(--spacing-xl);
-        }
-        
-        .footer-logo {
-            margin-bottom: var(--spacing-md);
-        }
-        
-        .footer-links h3 {
-            color: var(--accent);
-            margin-bottom: var(--spacing-md);
-            font-size: 1.2rem;
-        }
-        
-        .footer-links ul li {
-            margin-bottom: var(--spacing-sm);
-        }
-        
-        .footer-links ul li a:hover {
-            color: var(--accent);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-md);
-        }
-        
-        .social-link {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-        
-        .social-link:hover {
-            background-color: var(--accent);
-            color: var(--primary-bg);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: var(--spacing-lg);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--secondary-text);
-            font-size: 0.9rem;
-        }
-        
-        /* Page Sections (for multi-page navigation) */
-        .page-section {
-            display: none;
-            padding-top: 100px;
-            min-height: 100vh;
-        }
-        
-        .page-section.active {
-            display: block;
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .container {
-                flex-direction: column;
-                gap: var(--spacing-lg);
-            }
-            
-            .hero-image {
-                width: 100%;
-                margin-left: 0;
-                margin-top: var(--spacing-lg);
-            }
-            
-            .hero-content {
-                max-width: 100%;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                position: relative;
-            }
-            
-            nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary-bg);
-                padding: var(--spacing-lg);
-                box-shadow: var(--box-shadow);
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: var(--transition);
-            }
-            
-            nav.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                gap: var(--spacing-md);
-            }
-            
-            .mobile-toggle {
-                display: block;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-            }
-            
-            .btn {
-                width: 100%;
-            }
-            
-            .about-features {
-                grid-template-columns: 1fr;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .section {
-                padding: var(--spacing-lg) 0;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Spartan:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -746,57 +20,44 @@
         <div class="container header-container">
             <div class="logo">
                 <div class="logo-img">
-                    <i class="fas fa-stethoscope" style="font-size: 1.8rem; color: var(--primary-bg);"></i>
+                    <img src="images/logo.png" alt="Clariti Scanworld Logo">
                 </div>
-                <div class="logo-text">Clariti <span>Scanworld</span></div>
             </div>
             
             <div class="mobile-toggle" id="mobile-toggle">
-                <i class="fas fa-bars"></i>
+                <i class="bi bi-list"></i>
             </div>
             
             <nav id="main-nav">
                 <ul>
-                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-                    <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
-                    <li><a href="#" class="nav-link" data-page="services">Services</a></li>
-                    <li><a href="#" class="nav-link" data-page="doctors">Our Doctors</a></li>
-                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
-                    <li><a href="https://wa.me/919074389847" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Book on WhatsApp</a></li>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="instructions.html" class="nav-link">Patient Instructions</a></li>
+                    <li><a href="booking.html" class="nav-link">Book Now</a></li>
+                    <li><a href="https://wa.me/919074389847" class="btn btn-whatsapp" target="_blank"><i class="bi bi-whatsapp"></i> Book on WhatsApp</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Home Page -->
-    <section id="home" class="page-section active">
+    <!-- Home Page Content -->
+    <section class="page-section active">
         <!-- Hero Section -->
         <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Perumbavoor's Only MRI Centre</h1>
-                    <p class="hero-subtitle">1.5 Tesla MRI • 4D Ultrasound • Fetal Medicine • LAB • NCS • EEG</p>
-                    <p>At Clariti Scan World, we bring world-class diagnostic care to the heart of Perumbavoor. As the region's only centre equipped with a 1.5 Tesla MRI scanner - along with advanced ultrasound and comprehensive laboratory services - we're committed to delivering fast, accurate, and compassionate care, every single day.</p>
-                    
-                    <div class="hero-features">
-                        <div class="hero-feature">
-                            <h3>Working Hours</h3>
-                            <p>Mon - Sat | 8:30 AM - 6:30 PM</p>
-                        </div>
-                        <div class="hero-feature">
-                            <h3>Quick Reporting</h3>
-                            <p>Expert analysis & fast results</p>
+            <div class="hero-background">
+               <img src="images/hero_image.png" alt="Clariti Scanworld - Perumbavoor's Only MRI Centre">
+            </div>
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="hero-content-inner">
+                        <h1>Perumbavoor's Only MRI Centre</h1>
+                        <p>• 1.5 Tesla MRI • 4D Ultrasound • Fetal Medicine • LAB • NCS • EEG</p>
+                        <p><strong>Mon–Sat | 8:30 AM – 6:30 PM</strong></p>
+                        <div class="hero-content-btns">
+                            <a href="https://wa.me/919074389847" class="btn btn-outline" target="_blank">Book On Whatsapp</a>
                         </div>
                     </div>
-                    
-                    <div class="hero-btns">
-                        <a href="https://wa.me/919074389847" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Book on WhatsApp</a>
-                        <a href="#" class="btn btn-outline" data-page="services">View Our Services</a>
-                    </div>
-                </div>
-                
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="MRI Machine">
                 </div>
             </div>
         </section>
@@ -822,12 +83,13 @@
                                 <p>Modern interiors, calming ambience, and well-planned spaces for stress-free diagnostics.</p>
                             </div>
                         </div>
-                        
-                        <a href="#" class="btn" data-page="about">Learn More</a>
                     </div>
                     
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Clariti Scanworld Facility">
+                        <img src="images/about_2.png" alt="Clariti Scanworld Facility">
+                    </div>
+                    <div class="text-left" style="margin-top: var(--spacing-xl);">
+                        <a href="about.html" class="btn">About Us</a>
                     </div>
                 </div>
             </div>
@@ -843,368 +105,88 @@
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1579154204601-015c2c1d7a06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="MRI Scan">
+                            <img src="images/service/mri.jpg" alt="MRI Scan">
                         </div>
                         <div class="service-content">
                             <h3>1.5 Tesla MRI</h3>
-                            <p>High-definition imaging for confident diagnosis. The 1.5T GE MRI scanner provides exceptional imaging and diagnostic capability.</p>
+                            <p>High-definition imaging for confident diagnosis</p>
                         </div>
                     </div>
                     
                     <div class="service-card">
                         <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ultrasound">
+                            <img src="images/service/service2.avif" alt="Ultrasound">
                         </div>
                         <div class="service-content">
                             <h3>Advanced Ultrasound</h3>
-                            <p>Safe, detailed scans for every stage of life with Mindray Resonai i9 Elite Ultrasound featuring multiple high-resolution probes.</p>
+                            <p>Safe, detailed scans for every stage of life</p>
                         </div>
                     </div>
                     
                     <div class="service-card">
                         <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Fetal Medicine">
+                            <img src="images/service/service3.avif" alt="Fetal Medicine">
                         </div>
                         <div class="service-content">
                             <h3>Fetal Medicine</h3>
-                            <p>Expert care for expecting mothers with advanced monitoring and diagnostic capabilities for maternal and fetal health.</p>
+                            <p>Expert care for expecting mothers</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="text-center" style="margin-top: var(--spacing-xl);">
-                    <a href="#" class="btn" data-page="services">View All Services</a>
+                <div class="text-left" style="margin-top: var(--spacing-xl);">
+                    <a href="services.html" class="btn">View All Services</a>
                 </div>
             </div>
         </section>
-    </section>
 
-    <!-- About Us Page -->
-    <section id="about" class="page-section">
-        <div class="container">
-            <div class="section" style="padding-top: 100px;">
-                <div class="section-header">
-                    <h2>About Clariti Scanworld</h2>
-                </div>
-                
-                <div class="about-content">
-                    <div>
-                        <p>At Clariti Scan World, we bring world-class diagnostic care to the heart of Perumbavoor. As the region's only centre equipped with a 1.5 Tesla MRI scanner - along with advanced ultrasound and comprehensive laboratory services - we're committed to delivering fast, accurate, and compassionate care, every single day.</p>
-                        
-                        <h3>Our Mission</h3>
-                        <p>To provide accessible, accurate, and advanced diagnostic services to the community of Perumbavoor and surrounding areas, using state-of-the-art technology and a patient-centric approach.</p>
-                        
-                        <h3>Our Vision</h3>
-                        <p>To be the most trusted diagnostic center in the region, recognized for excellence in medical imaging, laboratory services, and patient care.</p>
-                    </div>
-                    
-                    <div class="about-image">
-                        <img src="https://www.freepik.com/free-photo/doctor-getting-patient-ready-ct-scan_25053901.htm#fromView=keyword&page=1&position=2&uuid=41096565-4455-4a0c-a206-46c5ab6ffde8&query=Medical+scan" alt="Medical Technology">
-                    </div>
-                </div>
-                
-                <div class="about-features" style="margin-top: var(--spacing-xl);">
-                    <div class="about-feature">
-                        <h4>World-Class Technology</h4>
-                        <p>Equipped with highly advanced systems including 1.5 Tesla MRI and the Mindray Resonai i9 ultrasound, ensuring exceptional image clarity, faster scans, precise reporting.</p>
-                    </div>
-                    
-                    <div class="about-feature">
-                        <h4>Premium Patient Experience</h4>
-                        <p>At Clariti diagnostics, accuracy, comfort, and patient first care come together to create a diagnostic experience you can rely on.</p>
-                    </div>
-                    
-                    <div class="about-feature">
-                        <h4>First MRI in Perumbavoor</h4>
-                        <p>Only high strength MRI centre in Perumbavoor; 1.5T GE MRI scanner, renowned for exceptional imaging and diagnostic capability.</p>
-                    </div>
-                    
-                    <div class="about-feature">
-                        <h4>Advanced Ultrasound</h4>
-                        <p>Mindray Resonai i9 Elite Ultrasound features multiple high-resolution probes, delivering premium image clarity for precise examinations.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Page -->
-    <section id="services" class="page-section">
-        <div class="container">
-            <div class="section" style="padding-top: 100px;">
-                <div class="section-header">
-                    <h2>Our Services</h2>
-                </div>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1579154204601-015c2c1d7a06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="MRI Scan">
-                        </div>
-                        <div class="service-content">
-                            <h3>1.5 Tesla MRI</h3>
-                            <p>High-definition imaging for confident diagnosis. The 1.5T GE MRI scanner provides exceptional imaging and diagnostic capability with faster scanning times and superior image quality.</p>
-                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--secondary-text);">
-                                <li>Full-body MRI scanning</li>
-                                <li>Neurological and musculoskeletal imaging</li>
-                                <li>Cardiac and abdominal imaging</li>
-                                <li>Contrast and non-contrast studies</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ultrasound">
-                        </div>
-                        <div class="service-content">
-                            <h3>Advanced Ultrasound</h3>
-                            <p>Mindray Resonai i9 Elite Ultrasound with multiple high-resolution probes, delivering premium image clarity for precise and reliable examinations.</p>
-                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--secondary-text);">
-                                <li>Abdominal and pelvic ultrasound</li>
-                                <li>Obstetric and fetal ultrasound</li>
-                                <li>Vascular and Doppler studies</li>
-                                <li>Small parts and musculoskeletal ultrasound</li>
-                                <li>4D ultrasound for expecting parents</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Fetal Medicine">
-                        </div>
-                        <div class="service-content">
-                            <h3>Fetal Medicine</h3>
-                            <p>Comprehensive care for expecting mothers including detailed fetal anomaly scans, growth monitoring, and specialized consultations.</p>
-                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--secondary-text);">
-                                <li>First trimester screening</li>
-                                <li>Anomaly scans (level I & II)</li>
-                                <li>Fetal echocardiography</li>
-                                <li>Doppler studies for fetal wellbeing</li>
-                                <li>Genetic counseling</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1585435557343-3b092031c6e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Laboratory">
-                        </div>
-                        <div class="service-content">
-                            <h3>Laboratory Services</h3>
-                            <p>Comprehensive diagnostic lab for routine and specialized blood, urine and biochemical tests, guided by experienced professionals.</p>
-                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--secondary-text);">
-                                <li>Complete blood count (CBC)</li>
-                                <li>Biochemistry and hormonal assays</li>
-                                <li>Urine and stool analysis</li>
-                                <li>Serology and infectious disease testing</li>
-                                <li>Specialized tests and profiles</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="NCS">
-                        </div>
-                        <div class="service-content">
-                            <h3>Nerve Conduction Studies (NCS)</h3>
-                            <p>Mapping nerve function for targeted treatment of neurological conditions like carpal tunnel syndrome, peripheral neuropathies, and radiculopathies.</p>
-                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--secondary-text);">
-                                <li>Motor and sensory nerve conduction</li>
-                                <li>Late responses (F-wave, H-reflex)</li>
-                                <li>Repetitive nerve stimulation</li>
-                                <li>Blink reflex studies</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="EEG">
-                        </div>
-                        <div class="service-content">
-                            <h3>Electroencephalogram (EEG)</h3>
-                            <p>Monitoring brain activity with precision and care for diagnosis of epilepsy, sleep disorders, encephalopathies, and other neurological conditions.</p>
-                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--secondary-text);">
-                                <li>Routine EEG (20-30 minutes)</li>
-                                <li>Sleep-deprived EEG</li>
-                                <li>Long-term video EEG monitoring</li>
-                                <li>Ambulatory EEG</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Doctors Page -->
-    <section id="doctors" class="page-section">
-        <div class="container">
-            <div class="section" style="padding-top: 100px;">
+        <!-- Meet Our Doctors Preview -->
+        <section class="section services doctors">
+            <div class="container">
                 <div class="section-header">
                     <h2>Meet Our Doctors</h2>
-                    <p class="text-center">Our specialists are here not just to scan — but to care.</p>
+                    <p style="max-width:700px;margin:0 auto;">
+                        Our specialists are here not just to scan — but to care.
+                    </p>
                 </div>
-                
-                <div class="doctors-grid">
-                    <div class="doctor-card">
-                        <div class="doctor-img">
-                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dr. Roshan K Valsan">
-                        </div>
-                        <div class="doctor-info">
-                            <h3>Dr. Roshan K Valsan</h3>
-                            <p class="doctor-specialty">Radiologist & MRI Specialist</p>
-                            <p>With over 15 years of experience in diagnostic imaging, Dr. Valsan specializes in MRI interpretation and interventional radiology.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="doctor-card">
-                        <div class="doctor-img">
-                            <img src="https://www.freepik.com/free-ai-image/confident-doctor-clinic_418010511.htm#fromView=keyword&page=1&position=0&uuid=323fd3bb-5c44-476e-a055-a28b247e5fcf&query=Doctor" alt="Dr. Anusha">
-                        </div>
-                        <div class="doctor-info">
-                            <h3>Dr. Anusha</h3>
-                            <p class="doctor-specialty">Sonologist & Fetal Medicine Specialist</p>
-                            <p>Dr. Anusha has extensive experience in obstetric and gynecological ultrasound, with special expertise in fetal medicine and anomaly scans.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="doctor-card">
-                        <div class="doctor-img">
-                            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dr. Hrishikesh V J">
-                        </div>
-                        <div class="doctor-info">
-                            <h3>Dr. Hrishikesh V J</h3>
-                            <p class="doctor-specialty">Neurologist & EEG Specialist</p>
-                            <p>Dr. Hrishikesh specializes in neurological disorders, EEG interpretation, and nerve conduction studies with over 12 years of clinical experience.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="doctor-card">
-                        <div class="doctor-img">
-                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dr. Pareekshith Bhatt">
-                        </div>
-                        <div class="doctor-info">
-                            <h3>Dr. Pareekshith Bhatt</h3>
-                            <p class="doctor-specialty">Pathologist & Lab Director</p>
-                            <p>Dr. Bhatt oversees our laboratory services, ensuring accurate and timely reporting of all pathological tests with strict quality control measures.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Page -->
-    <section id="contact" class="page-section">
-        <div class="container">
-            <div class="section" style="padding-top: 100px;">
-                <div class="section-header">
-                    <h2>Contact Us</h2>
-                    <p class="text-center">Get in touch with us for appointments, inquiries, or feedback</p>
-                </div>
-                
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Visit Our Centre</h3>
-                                <p>UBI Road opposite Perumbavoor Taluk hospital,<br>Perumbavoor, Ernakulam,<br>Kerala 683542</p>
-                            </div>
+                <div class="services-grid">
+                    <div class="service-card doctor-card">
+                        <div class="service-img">
+                            <img src="images/doctors/Roshan.jpg" alt="Dr. Roshan K Valsan">
                         </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Call Us</h3>
-                                <p>9074389847<br>8848189847</p>
-                                <p>For WhatsApp booking: <a href="https://wa.me/919074389847" style="color: var(--accent);">Click here</a></p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Working Hours</h3>
-                                <p>Monday - Saturday: 8:30 AM - 6:30 PM</p>
-                                <p>Sunday: Emergency services only</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Email Us</h3>
-                                <p>info@claritscanworld.com</p>
-                                <p>appointments@claritscanworld.com</p>
-                            </div>
+                        <div class="service-content">
+                            <h3>Dr. Roshan K Valsan</h3>
+                            <p>MBBS, MD Radiodiagnosis</p>
                         </div>
                     </div>
-                    
-                    <div class="contact-form">
-                        <h3>Send Us a Message</h3>
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" class="form-control" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" class="form-control" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" class="form-control">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="service">Service Interested In</label>
-                                <select id="service" class="form-control">
-                                    <option value="">Select a service</option>
-                                    <option value="mri">1.5 Tesla MRI</option>
-                                    <option value="ultrasound">Advanced Ultrasound</option>
-                                    <option value="fetal">Fetal Medicine</option>
-                                    <option value="lab">Laboratory Services</option>
-                                    <option value="ncs">Nerve Conduction Study</option>
-                                    <option value="eeg">EEG</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" class="form-control" rows="5"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn">Send Message</button>
-                        </form>
+
+                    <div class="service-card doctor-card">
+                        <div class="service-img">
+                            <img src="images/doctors/Kushal.jpg" alt="Dr. Kushal Gupta">
+                        </div>
+                        <div class="service-content">
+                            <h3>Dr. Kushal Gupta</h3>
+                            <p>MBBS, MD Radiodiagnosis</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card doctor-card">
+                        <div class="service-img">
+                            <img src="images/doctors/Hrishikesh.jpg" alt="Dr. Hrishikesh V J">
+                        </div>
+                        <div class="service-content">
+                            <h3>Dr. Hrishikesh V J</h3>
+                            <p>MBBS, MD Radiodiagnosis</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div style="margin-top: var(--spacing-xl);">
-                    <div class="text-center">
-                        <h3>Find Us on Google Maps</h3>
-                        <div style="height: 300px; background-color: var(--gradient-tone); border-radius: var(--border-radius); margin-top: var(--spacing-md); display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--accent);"></i>
-                            <p style="margin-left: var(--spacing-md);">map</p>
-                        </div>
-                    </div>
+                <div class="text-left" style="margin-top: var(--spacing-xl);">
+                    <a href="about.html#doctors" class="btn">Our Doctors</a>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
 
     <!-- Footer -->
@@ -1217,42 +199,42 @@
                     </div>
                     <p>Perumbavoor's only diagnostic centre with 1.5 Tesla MRI, advanced ultrasound, and comprehensive laboratory services.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="https://wa.me/919074389847" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="https://wa.me/919074389847" class="social-link" target="_blank"><i class="bi bi-whatsapp"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#" data-page="home">Home</a></li>
-                        <li><a href="#" data-page="about">About Us</a></li>
-                        <li><a href="#" data-page="services">Services</a></li>
-                        <li><a href="#" data-page="doctors">Our Doctors</a></li>
-                        <li><a href="#" data-page="contact">Contact Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="instructions.html">Patient Instructions</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h3>Our Services</h3>
                     <ul>
-                        <li><a href="#" data-page="services">1.5 Tesla MRI</a></li>
-                        <li><a href="#" data-page="services">Advanced Ultrasound</a></li>
-                        <li><a href="#" data-page="services">Fetal Medicine</a></li>
-                        <li><a href="#" data-page="services">Laboratory Services</a></li>
-                        <li><a href="#" data-page="services">NCS & EEG</a></li>
+                        <li><a href="services.html#mri">1.5 Tesla MRI</a></li>
+                        <li><a href="services.html#ultrasound">Advanced Ultrasound</a></li>
+                        <li><a href="services.html#fetal">Fetal Medicine</a></li>
+                        <li><a href="services.html#lab">Laboratory Services</a></li>
+                        <li><a href="services.html#ncs">NCS & EEG</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h3>Contact Info</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 8px; color: var(--accent);"></i> UBI Road, Perumbavoor</li>
-                        <li><i class="fas fa-phone" style="margin-right: 8px; color: var(--accent);"></i> 9074389847</li>
-                        <li><i class="fas fa-phone" style="margin-right: 8px; color: var(--accent);"></i> 8848189847</li>
-                        <li><i class="fas fa-envelope" style="margin-right: 8px; color: var(--accent);"></i> info@claritscanworld.com</li>
+                        <li><i class="bi bi-geo-alt" style="margin-right: 8px; color: var(--accent);"></i> UBI Road, Perumbavoor</li>
+                        <li><i class="bi bi-telephone" style="margin-right: 8px; color: var(--accent);"></i> 9074389847</li>
+                        <li><i class="bi bi-telephone" style="margin-right: 8px; color: var(--accent);"></i> 8848189847</li>
+                        <li><i class="bi bi-envelope" style="margin-right: 8px; color: var(--accent);"></i> info@claritscanworld.com</li>
                     </ul>
                 </div>
             </div>
@@ -1263,110 +245,6 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile Navigation Toggle
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const mainNav = document.getElementById('main-nav');
-        
-        mobileToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            mobileToggle.querySelector('i').classList.toggle('fa-bars');
-            mobileToggle.querySelector('i').classList.toggle('fa-times');
-        });
-        
-        // Page Navigation
-        const navLinks = document.querySelectorAll('.nav-link, .btn[data-page], .footer-links a[data-page]');
-        const pageSections = document.querySelectorAll('.page-section');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                const targetPage = link.getAttribute('data-page');
-                
-                // Update active navigation link
-                document.querySelectorAll('.nav-link').forEach(navLink => {
-                    navLink.classList.remove('active');
-                });
-                
-                if (link.classList.contains('nav-link')) {
-                    link.classList.add('active');
-                } else {
-                    // Find corresponding nav link and activate it
-                    const correspondingNavLink = document.querySelector(`.nav-link[data-page="${targetPage}"]`);
-                    if (correspondingNavLink) {
-                        correspondingNavLink.classList.add('active');
-                    }
-                }
-                
-                // Show target page section
-                pageSections.forEach(section => {
-                    section.classList.remove('active');
-                });
-                
-                document.getElementById(targetPage).classList.add('active');
-                
-                // Close mobile menu if open
-                if (mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                    mobileToggle.querySelector('i').classList.remove('fa-times');
-                    mobileToggle.querySelector('i').classList.add('fa-bars');
-                }
-                
-                // Scroll to top when changing pages
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Header scroll effect
-        const header = document.getElementById('header');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Contact form submission
-        const contactForm = document.getElementById('contactForm');
-        
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                // Get form values
-                const name = document.getElementById('name').value;
-                const phone = document.getElementById('phone').value;
-                const service = document.getElementById('service').value;
-                
-                // In a real application, you would send this data to a server
-                // For now, we'll just show a success message and redirect to WhatsApp
-                const whatsappMessage = `Hello, I'm ${name}. I'd like to book an appointment for ${service || 'a diagnostic service'}. My phone number is ${phone}.`;
-                const encodedMessage = encodeURIComponent(whatsappMessage);
-                const whatsappURL = `https://wa.me/919074389847?text=${encodedMessage}`;
-                
-                // Open WhatsApp in a new tab
-                window.open(whatsappURL, '_blank');
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Show success message
-                alert('Thank you for your inquiry! We\'ve opened WhatsApp for you to complete your booking.');
-            });
-        }
-        
-        // Initialize with home page active
-        document.addEventListener('DOMContentLoaded', () => {
-            // Set initial active state
-            document.getElementById('home').classList.add('active');
-            document.querySelector('.nav-link[data-page="home"]').classList.add('active');
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
