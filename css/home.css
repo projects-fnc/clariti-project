@@ -1,0 +1,106 @@
+/* Home page specific styles */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.hero .hero-content-inner {
+    text-align: left;
+    max-width: 560px;
+    margin: 0;
+}
+
+.hero .hero-content-inner h1 {
+    color: var(--off-white);
+}
+
+.hero-features {
+    color: rgba(250, 251, 251, 0.88);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.hero-timing {
+    color: rgba(250, 251, 251, 0.88);
+    margin-bottom: 2rem;
+}
+
+.hero-content-btns {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.about-preview {
+    background-color: var(--gradient-tone);
+}
+
+.services-preview .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.doctors-preview .doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.doctor-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+
+.doctor-img {
+    height: 250px;
+    overflow: hidden;
+}
+
+.doctor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-info {
+    padding: var(--spacing-md);
+    text-align: center;
+}
+
+.doctor-qualification {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+}

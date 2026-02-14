@@ -1,0 +1,79 @@
+/* Instructions page specific styles */
+.instructions-hero {
+    background-color: var(--dark-teal-green);
+    color: var(--off-white);
+    padding: 120px 0 60px;
+    text-align: center;
+}
+
+.instructions-hero h1 {
+    color: var(--off-white);
+    margin-bottom: 1rem;
+}
+
+.instructions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.instruction-card {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-top: 4px solid var(--accent);
+}
+
+.instruction-icon {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: var(--spacing-md);
+}
+
+.instruction-card h3 {
+    color: var(--dark-teal-green);
+    margin-bottom: var(--spacing-md);
+}
+
+.instruction-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: var(--secondary-text);
+}
+
+.instruction-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.important-notes {
+    background-color: var(--secondary-shade);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-lg);
+}
+
+.important-notes h3 {
+    color: var(--dark-teal-green);
+    margin-bottom: var(--spacing-md);
+}
+
+.important-notes ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: var(--secondary-text);
+}
+
+.contact-support {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background-color: var(--gradient-tone);
+    border-radius: var(--border-radius);
+}
+
+.contact-support p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
